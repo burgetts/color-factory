@@ -1,0 +1,28 @@
+.ColorsList-header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.ColorsList-header a {
+    color:white;
+}
+.ColorsList-header a:visited {
+    color:white;
+}
+
+.ColorsList-content {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.ColorsList-content li {
+    list-style-type: none;
+
+}
+
+.ColorsList-content ul {
+    margin: 0;
+    padding: 0;
+}

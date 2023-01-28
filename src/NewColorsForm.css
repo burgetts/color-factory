@@ -1,0 +1,28 @@
+.NewColorForm {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://t4.ftcdn.net/jpg/03/52/57/57/360_F_352575717_WTALMjm46rYXBvxRSBp67K39uyoaKHgh.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: lightpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NewColorForm-form {
+    background-color:white;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: left;
+    margin: 400px; 
+    grid-template-rows: auto;
+    width: 500px;
+    height: 300px;
+    grid-gap: 100px;
+    padding: 30px 5px;
+}
+
+.NewColorForm input {
+    margin: 0px 10px;
+}

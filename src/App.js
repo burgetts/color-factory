@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import ColorsList from './ColorsList';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import NewColorForm from './NewColorForm';
+import Color from './Color';
 
-function App() {
+const App = () => {
+  const [colors, setColors] = useState([{name: 'red', colorValue: ' #FF0000'}])
+  const addColor = (newColor) => {
+      setColors([...colors, newColor])
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path='/colors' >
+        <Route index element={<ColorsList colors={colors} />} />
+        <Route path='/colors/new' element={<NewColorForm addColor={addColor} colors={colors}/>} />
+        {/* how to pass just one?? */}
+        <Route path='/colors/:color' element={<Color colors={colors}/>} /> 
+      </Route>
+      <Route path='/*' element={<Navigate to='/colors' />} />
+    </Routes>
   );
 }
 
